@@ -2,7 +2,7 @@
   'use strict';
 
   !function (a) {
-    "function" == typeof define && define.amd ? define(["jquery"], a) : a("object" == typeof exports ? require("jquery") : jQuery);
+    'function' == typeof define && define.amd ? define(['jquery'], a) : a('object' == typeof exports ? require('jquery') : jQuery);
   }(function (a) {
     var b,
         c = navigator.userAgent,
@@ -11,25 +11,25 @@
         f = /android/i.test(c);
     a.mask = {
       definitions: {
-        9: "[0-9]",
-        a: "[A-Za-z]",
-        "*": "[A-Za-z0-9]"
+        9: '[0-9]',
+        a: '[A-Za-z]',
+        '*': '[A-Za-z0-9]'
       },
       autoclear: !0,
-      dataName: "rawMaskFn",
-      placeholder: "_"
+      dataName: 'rawMaskFn',
+      placeholder: '_'
     }, a.fn.extend({
       caret: function (a, b) {
         var c;
-        if (0 !== this.length && !this.is(":hidden")) return "number" == typeof a ? (b = "number" == typeof b ? b : a, this.each(function () {
-          this.setSelectionRange ? this.setSelectionRange(a, b) : this.createTextRange && (c = this.createTextRange(), c.collapse(!0), c.moveEnd("character", b), c.moveStart("character", a), c.select());
-        })) : (this[0].setSelectionRange ? (a = this[0].selectionStart, b = this[0].selectionEnd) : document.selection && document.selection.createRange && (c = document.selection.createRange(), a = 0 - c.duplicate().moveStart("character", -1e5), b = a + c.text.length), {
+        if (0 !== this.length && !this.is(':hidden')) return 'number' == typeof a ? (b = 'number' == typeof b ? b : a, this.each(function () {
+          this.setSelectionRange ? this.setSelectionRange(a, b) : this.createTextRange && (c = this.createTextRange(), c.collapse(!0), c.moveEnd('character', b), c.moveStart('character', a), c.select());
+        })) : (this[0].setSelectionRange ? (a = this[0].selectionStart, b = this[0].selectionEnd) : document.selection && document.selection.createRange && (c = document.selection.createRange(), a = 0 - c.duplicate().moveStart('character', -1e5), b = a + c.text.length), {
           begin: a,
           end: b
         });
       },
       unmask: function () {
-        return this.trigger("unmask");
+        return this.trigger('unmask');
       },
       mask: function (c, g) {
         var h, i, j, k, l, m, n, o;
@@ -44,9 +44,9 @@
           autoclear: a.mask.autoclear,
           placeholder: a.mask.placeholder,
           completed: null
-        }, g), i = a.mask.definitions, j = [], k = n = c.length, l = null, a.each(c.split(""), function (a, b) {
-          "?" == b ? (n--, k = a) : i[b] ? (j.push(new RegExp(i[b])), null === l && (l = j.length - 1), k > a && (m = j.length - 1)) : j.push(null);
-        }), this.trigger("unmask").each(function () {
+        }, g), i = a.mask.definitions, j = [], k = n = c.length, l = null, a.each(c.split(''), function (a, b) {
+          '?' == b ? (n--, k = a) : i[b] ? (j.push(new RegExp(i[b])), null === l && (l = j.length - 1), k > a && (m = j.length - 1)) : j.push(null);
+        }), this.trigger('unmask').each(function () {
           function h() {
             if (g.completed) {
               for (var a = l; m >= a; a++) if (j[a] && C[a] === p(a)) return;
@@ -116,7 +116,7 @@
           }
 
           function w(a) {
-            if (!B.prop("readonly")) {
+            if (!B.prop('readonly')) {
               var b,
                   c,
                   e,
@@ -126,7 +126,7 @@
           }
 
           function x(b) {
-            if (!B.prop("readonly")) {
+            if (!B.prop('readonly')) {
               var c,
                   d,
                   e,
@@ -158,7 +158,7 @@
           }
 
           function z() {
-            B.val(C.join(""));
+            B.val(C.join(''));
           }
 
           function A(a) {
@@ -180,35 +180,35 @@
               }
             } else C[b] === e.charAt(d) && d++, k > b && (f = b);
 
-            return a ? z() : k > f + 1 ? g.autoclear || C.join("") === D ? (B.val() && B.val(""), y(0, n)) : z() : (z(), B.val(B.val().substring(0, f + 1))), k ? b : l;
+            return a ? z() : k > f + 1 ? g.autoclear || C.join('') === D ? (B.val() && B.val(''), y(0, n)) : z() : (z(), B.val(B.val().substring(0, f + 1))), k ? b : l;
           }
 
           var B = a(this),
-              C = a.map(c.split(""), function (a, b) {
-            return "?" != a ? i[a] ? p(b) : a : void 0;
+              C = a.map(c.split(''), function (a, b) {
+            return '?' != a ? i[a] ? p(b) : a : void 0;
           }),
-              D = C.join(""),
+              D = C.join(''),
               E = B.val();
           B.data(a.mask.dataName, function () {
             return a.map(C, function (a, b) {
               return j[b] && a != p(b) ? a : null;
-            }).join("");
-          }), B.one("unmask", function () {
-            B.off(".mask").removeData(a.mask.dataName);
-          }).on("focus.mask", function () {
-            if (!B.prop("readonly")) {
+            }).join('');
+          }), B.one('unmask', function () {
+            B.off('.mask').removeData(a.mask.dataName);
+          }).on('focus.mask', function () {
+            if (!B.prop('readonly')) {
               clearTimeout(b);
               var a;
               E = B.val(), a = A(), b = setTimeout(function () {
-                B.get(0) === document.activeElement && (z(), a == c.replace("?", "").length ? B.caret(0, a) : B.caret(a));
+                B.get(0) === document.activeElement && (z(), a == c.replace('?', '').length ? B.caret(0, a) : B.caret(a));
               }, 10);
             }
-          }).on("blur.mask", v).on("keydown.mask", w).on("keypress.mask", x).on("input.mask paste.mask", function () {
-            B.prop("readonly") || setTimeout(function () {
+          }).on('blur.mask', v).on('keydown.mask', w).on('keypress.mask', x).on('input.mask paste.mask', function () {
+            B.prop('readonly') || setTimeout(function () {
               var a = A(!0);
               B.caret(a), h();
             }, 0);
-          }), e && f && B.off("input.mask").on("input.mask", u), A();
+          }), e && f && B.off('input.mask').on('input.mask', u), A();
         });
       }
     });
@@ -221,7 +221,7 @@
     }
   });
   jQuery(function ($) {
-    $("#tel").mask("+38071 9999999");
+    $('#tel').mask('+371 9999999');
   });
   $('.teachers__slider').slick({
     infinite: true,
@@ -243,15 +243,15 @@
   });
 
   (function () {
-    const target = document.querySelector(".target");
-    const links = document.querySelectorAll(".header__nav a");
+    const target = document.querySelector('.target');
+    const links = document.querySelectorAll('.header__nav a');
 
     function mouseenterFunc() {
       let link = null;
 
       if (!this) {
         for (let i = 0; i < links.length; i++) {
-          if (links[i].parentNode.classList.contains("active")) {
+          if (links[i].parentNode.classList.contains('active')) {
             link = links[i];
           }
         }
@@ -260,35 +260,35 @@
       }
 
       for (let i = 0; i < links.length; i++) {
-        if (links[i].parentNode.classList.contains("active")) {
-          links[i].parentNode.classList.remove("active");
+        if (links[i].parentNode.classList.contains('active')) {
+          links[i].parentNode.classList.remove('active');
         }
 
-        links[i].style.opacity = "0.8";
+        links[i].style.opacity = '0.8';
       }
 
-      link.parentNode.classList.add("active");
-      link.style.opacity = "1";
+      link.parentNode.classList.add('active');
+      link.style.opacity = '1';
       const width = link.getBoundingClientRect().width;
       const height = link.getBoundingClientRect().height;
       const left = link.getBoundingClientRect().left;
       const top = link.getBoundingClientRect().top;
-      const color = ["white"];
+      const color = ['white'];
       target.style.width = `${width}px`;
       target.style.height = `${height}px`;
       target.style.left = `${left}px`;
       target.style.top = `${top}px`;
       target.style.borderColor = color;
-      target.style.transform = "none";
+      target.style.transform = 'none';
     }
 
     for (let i = 0; i < links.length; i++) {
       // links[i].addEventListener("click", (e) => e.preventDefault());
-      links[i].addEventListener("mouseenter", mouseenterFunc);
+      links[i].addEventListener('mouseenter', mouseenterFunc);
     }
 
     function resizeFunc() {
-      const active = document.querySelector(".header__nav li.active");
+      const active = document.querySelector('.header__nav li.active');
 
       if (active) {
         const width = active.getBoundingClientRect().width;
@@ -307,7 +307,7 @@
       }
     }
 
-    window.addEventListener("resize", resizeFunc);
+    window.addEventListener('resize', resizeFunc);
     $(document).ready(function () {
       mouseenterFunc();
     });
