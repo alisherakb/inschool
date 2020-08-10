@@ -1,0 +1,31 @@
+// import presets
+
+@import "./presets/bp";
+@import "./presets/reset";
+@import "./presets/fonts";
+@import './presets/vars';
+
+
+// import - blocks
+@import "./blocks/head";
+@import "./blocks/header";
+@import "./blocks/main";
+@import "./blocks/teachers";
+@import "./blocks/request";
+@import "./blocks/why";
+@import "./blocks/programm";
+@import "./blocks/footer";
+
+
+// import - conts-blocks
+
+// @import "./conts/header";
+@import "./conts/bg";
+@import "./conts/form";
+
+
+// import - programms-blocks
+
+@import "./programms/main";
+@import "./programms/price";
+@import "./programms/programms";

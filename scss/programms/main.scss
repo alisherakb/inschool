@@ -1,0 +1,53 @@
+.pmain {
+    background         : url(../img/programm/bg.jpg) no-repeat;
+    background-size    : cover;
+    background-position: center;
+
+    &__inner {
+        width          : 100%;
+        height         : 100%;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        padding        : 40px 0 70px;
+
+        @include min-tablet {
+            padding: 100px 0 130px;
+        }
+
+        @include min-pc {
+            padding: 150px 0 180px;
+        }
+
+        @include min-pc-l {
+            padding: 224px 0 282px;
+        }
+    }
+
+    &__title {
+        font-family: $HelveticaN;
+        font-style : normal;
+        font-weight: bold;
+        font-size  : 16px;
+        line-height: 30px;
+        text-align : center;
+        color: #FFFFFF;
+        >span{
+            color: #00FFB3;
+        }
+        @include min-phone-l {
+            font-size  : 22px;
+            line-height: 45px;
+        }
+
+        @include min-tablet {
+            font-size     : 40px;
+            line-height   : 50px;
+        }
+
+        @include min-pc {
+            font-size     : 50px;
+            line-height   : 61px;
+        }
+    }
+}

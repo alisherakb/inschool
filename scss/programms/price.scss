@@ -1,0 +1,352 @@
+.price {
+    padding-bottom: 30px;
+
+    @include min-tablet {
+        padding-bottom: 70px;
+    }
+
+    @include min-pc {
+        padding-bottom: 100px;
+    }
+
+    @include min-pc-l {
+        padding-bottom: 250px;
+    }
+
+    >.container {
+        max-width: 1692px;
+    }
+
+    &__wrapper {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+    }
+
+    &__title {
+        font-family   : $HelveticaN;
+        font-style    : normal;
+        font-weight   : bold;
+        font-size     : 16px;
+        line-height   : 30px;
+        text-align    : center;
+        color         : #000;
+        padding-bottom: 30px;
+
+        @include min-phone-l {
+            font-size  : 22px;
+            line-height: 45px;
+        }
+
+        @include min-tablet {
+            font-size     : 40px;
+            line-height   : 50px;
+            padding-bottom: 50px;
+        }
+
+        @include min-pc {
+            font-size     : 50px;
+            line-height   : 61px;
+            padding-bottom: 80px;
+        }
+
+        @include min-pc-l {
+            padding-bottom: 100px;
+        }
+    }
+
+    &__inner {
+        display       : flex;
+        flex-direction: column;
+        width         : 100%;
+        align-items   : center;
+
+        @include min-tablet {
+            flex-direction : row;
+            justify-content: center;
+            align-items    : unset;
+        }
+    }
+
+    &__item {
+        display       : flex;
+        flex-direction: column;
+        width         : 100%;
+        max-width     : 350px;
+        padding-bottom: 30px;
+        align-items   : center;
+        margin-bottom : 40px;
+        background    : #fff;
+
+        @include min-tablet {
+            padding-bottom: 40px;
+            max-width     : 580px;
+            margin-bottom : unset;
+        }
+
+        @include min-pc {
+            padding-bottom: 90px;
+        }
+
+        &--yellow {
+            box-shadow: 25px 0px 39px rgba(23, 23, 23, 0.35), -25px 0px 39px rgba(0, 0, 0, 0.4);
+
+            @include min-tablet {
+                box-shadow: -18px 4px 39px rgba(23, 23, 23, 0.39);
+            }
+        }
+
+        &--red {
+
+            box-shadow: 25px 0px 39px rgba(23, 23, 23, 0.35), -25px 0px 39px rgba(0, 0, 0, 0.4);
+
+            @include min-tablet {
+                transform : scale(1.1);
+                z-index   : 1;
+                box-shadow: 25px 0px 39px rgba(23, 23, 23, 0.35), -25px 0px 39px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        &--green {
+            box-shadow: 25px 0px 39px rgba(23, 23, 23, 0.35), -25px 0px 39px rgba(0, 0, 0, 0.4);
+
+            @include min-tablet {
+                box-shadow: 18px 4px 39px rgba(23, 23, 23, 0.36);
+            }
+        }
+
+        &-header {
+            text-align: center;
+            padding   : 15px;
+            width     : 100%;
+
+            @include min-tablet {
+                padding: 23px;
+            }
+
+            @include min-pc {
+                padding: 32px;
+            }
+
+            >span {
+                font-family: $HelveticaB;
+                font-style : normal;
+                font-weight: normal;
+                font-size  : 16px;
+                line-height: 30px;
+                text-align : center;
+                color      : #FFFFFF;
+
+                @include min-phone-l {
+                    font-size  : 22px;
+                    line-height: 38px;
+                }
+
+                @include min-tablet {
+                    font-size  : 33px;
+                    line-height: 45px;
+                }
+
+                @include min-pc {
+                    font-size  : 50px;
+                    line-height: 61px;
+                }
+
+                @include min-pc-l {}
+
+                >span {
+                    color      : #000;
+                    font-size  : 8px;
+                    line-height: 15px;
+
+                    @include min-phone-l {
+                        font-size  : 11px;
+                        line-height: 22px;
+                    }
+
+                    @include min-tablet {
+                        font-size  : 20px;
+                        line-height: 25px;
+                    }
+
+                    @include min-pc {
+                        font-size  : 25px;
+                        line-height: 29px;
+                    }
+
+                }
+            }
+
+            &.yellow {
+                background: rgba(255, 196, 45, 0.98);
+            }
+
+            &.red {
+                background: #FF5F5F;
+            }
+
+            &.green {
+                background: #6DB228;
+            }
+        }
+
+        &-subjects {
+            display       : flex;
+            flex-direction: column;
+            padding       : 20px 15px 40px 15px;
+            width         : 100%;
+            flex          : 1;
+
+            @include min-tablet {
+                padding: 25px;
+            }
+
+            @include min-pc {
+                padding: 30px;
+            }
+
+            @include min-pc-l {
+                padding: 30px 30px 120px 50px;
+            }
+
+            >span {
+                font-family   : $HelveticaB;
+                font-style    : normal;
+                font-weight   : bold;
+                font-size     : 14px;
+                line-height   : 18px;
+                color         : #000000;
+                padding-bottom: 15px;
+                opacity       : .7;
+
+                &:first-child {
+                    opacity: 1;
+                }
+
+                @include min-tablet-l {
+                    font-size     : 22px;
+                    line-height   : 25px;
+                    padding-bottom: 20px;
+                }
+
+                @include min-pc {
+                    font-size     : 25px;
+                    line-height   : 30px;
+                    padding-bottom: 25px;
+                }
+
+                @include min-pc-l {
+                    font-size     : 30px;
+                    line-height   : 34px;
+                    padding-bottom: 35px;
+                }
+            }
+        }
+
+        &-cost {
+            font-family   : $HelveticaN;
+            font-style    : normal;
+            font-weight   : 0;
+            font-size     : 20px;
+            line-height   : 30px;
+            text-align    : center;
+            padding-bottom: 20px;
+
+            @include min-tablet {
+                font-size     : 35px;
+                line-height   : 40px;
+                padding-bottom: 30px;
+            }
+
+            @include min-pc {
+                font-size     : 50px;
+                line-height   : 60px;
+                padding-bottom: 35px;
+            }
+
+            @include min-pc-l {
+                font-size     : 70px;
+                line-height   : 80px;
+                padding-bottom: 46px;
+            }
+
+            &.yellow {
+                color: rgba(255, 196, 45, 0.98);
+            }
+
+            &.red {
+                color: #FF5F5F;
+            }
+
+            &.green {
+                color: #6DB228;
+            }
+        }
+
+        &-button {
+            border-radius  : 10px;
+            font-family    : $HelveticaB;
+            text-decoration: none;
+            font-style     : normal;
+            font-weight    : 0;
+            font-size      : 14px;
+            line-height    : 18px;
+            text-align     : center;
+            transition     : all .3s;
+            padding        : 10px;
+            max-width      : 56%;
+
+            @include min-tablet-l {
+                font-size  : 18px;
+                line-height: 22px;
+                padding    : 15px;
+            }
+
+            @include min-pc {
+                border-radius: 23px;
+                font-size    : 22px;
+                line-height  : 26px;
+                padding      : 15px 22px;
+            }
+
+            @include min-pc-l {
+                font-size  : 30px;
+                line-height: 34px;
+                padding    : 22px;
+            }
+
+            &.yellow {
+                background: rgba(255, 196, 45, 0.98);
+                border    : 1px solid rgba(255, 196, 45, 0.98);
+                color     : #FFFFFF;
+
+                &:hover {
+                    color     : rgba(255, 196, 45, 0.98);
+                    background: #fff;
+                }
+            }
+
+            &.red {
+                background: #FF5F5F;
+                border    : 1px solid #FF5F5F;
+                color     : #000;
+
+                &:hover {
+                    color     : #FF5F5F;
+                    background: #fff;
+                }
+            }
+
+            &.green {
+                background: #6DB228;
+                border    : 1px solid #6DB228;
+                color     : #fff;
+
+                &:hover {
+                    color     : #6DB228;
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

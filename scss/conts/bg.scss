@@ -1,0 +1,18 @@
+.bg {
+    background         : url(../img/conts/conts_bg.jpg) no-repeat;
+    background-size    : cover;
+    background-position: center;
+    width: 100%;
+    &:before{
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 70%;
+        @include min-tablet{
+            display: none;
+        }
+    }
+    @include min-tablet{
+        width: 50%;
+    }
+}
