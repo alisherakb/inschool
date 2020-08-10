@@ -221,7 +221,7 @@
     }
   });
   jQuery(function ($) {
-    $('#tel').mask('+371 9999999');
+    $('#tel').mask('+371 99999999');
   });
   $('.teachers__slider').slick({
     infinite: true,
