@@ -1,0 +1,195 @@
+.conts {
+    display        : flex;
+    justify-content: flex-start;
+    background: #fff;
+    
+    &__inner {
+        padding       : 30px 15px;
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        width         : 100%;
+        max-width     : 700px;
+
+        @include min-tablet {
+
+            padding-left: 30px;
+        }
+
+        @include min-pc {
+            padding: 60px 15px 60px 40px;
+        }
+
+        @include min-pc-l {
+            padding: 100px 0 100px 60px;
+        }
+    }
+
+    &__title {
+        font-family: $HelveticaB;
+        font-style : normal;
+        font-weight: normal;
+        font-size  : 20px;
+        line-height: 30px;
+        text-align : center;
+        color      : #000000;
+        padding-bottom: 20px;
+
+        >span {
+            color: #00FFB3;
+        }
+
+        @include min-phone-l {
+            font-size  : 35px;
+            line-height: 45px;
+        }
+
+        @include min-tablet {
+            font-size     : 40px;
+            line-height   : 50px;
+            padding-bottom: 35px;
+        }
+
+        @include min-pc {
+            font-size     : 50px;
+            line-height   : 57px;
+            padding-bottom: 54px;
+        }
+    }
+
+    &__form {
+        width         : 100%;
+        padding-bottom: 30px;
+
+        @include min-tablet {
+            padding-bottom: 40px;
+        }
+
+        @include min-pc {
+            padding-bottom: 75px;
+        }
+    }
+
+    &__inputs {
+        display        : flex;
+        flex-direction : column;
+        justify-content: space-between;
+        flex-wrap      : wrap;
+
+        @include min-tablet {
+            flex-direction: row;
+        }
+
+        >input {
+            @include min-tablet {
+                max-width: 290px;
+            }
+
+            @include min-pc {
+                width: 100%;
+            }
+        }
+    }
+
+    &__input,
+    &__textarea {
+        padding      : 24px 18px;
+        border       : 2px solid #000000;
+        box-sizing   : border-box;
+        border-radius: 20px;
+        background   : transparent;
+        font-family  : $HelveticaB;
+        font-style   : normal;
+        font-weight  : bold;
+        font-size    : 20px;
+        line-height  : 23px;
+        color        : #000000;
+        margin-bottom: 15px;
+
+        @include min-tablet {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__textarea {
+        width : 100%;
+        height: 270px;
+        resize: none;
+    }
+
+    &__button {
+        &-wrapper {
+            width          : 100%;
+            display        : flex;
+            justify-content: center;
+
+            @include min-tablet {
+                justify-content: flex-end;
+            }
+        }
+
+        outline      : none;
+        border       : none;
+        background   : #00FFB3;
+        border-radius: 20px;
+        width        : 290px;
+        height       : 70px;
+        font-family  : $HelveticaB;
+        font-style   : normal;
+        font-weight  : bold;
+        font-size    : 24px;
+        line-height  : 28px;
+        text-align   : center;
+        color        : #000000;
+        transition   : all .3s;
+
+        &:hover {
+            background: #000000;
+            color     : #00FFB3;
+        }
+    }
+
+    &__items {
+        display        : flex;
+        justify-content: space-between;
+        flex-direction : column;
+        width          : 100%;
+
+        @include min-tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__item {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        padding-bottom: 30px;
+
+        @include min-tablet {
+            padding-bottom: unset;
+        }
+
+        >img {
+            margin-bottom: 8px;
+            @include min-tablet {
+                margin-bottom: 17px;
+            }
+
+        }
+
+        >a {
+            text-decoration: none;
+            font-family    : $HelveticaN;
+            font-style     : normal;
+            font-weight    : normal;
+            font-size      : 20px;
+            line-height    : 24px;
+            text-align     : center;
+            color          : #000000;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

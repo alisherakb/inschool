@@ -1,0 +1,104 @@
+.request {
+  background         : url(../img/request_bg.jpg) no-repeat;
+  background-size    : cover;
+  background-position: center;
+  padding-top        : 70px;
+  padding-bottom     : 80px;
+
+  @include min-pc {
+    padding-top   : 100px;
+    padding-bottom: 150px;
+  }
+  @include min-pc-l {
+    padding-top   : 158px;
+    padding-bottom: 286px;
+  }
+
+  &__inner {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+  }
+
+  &__title {
+    font-family   : $HelveticaN;
+    font-style    : normal;
+    font-weight   : bold;
+    font-size     : 18px;
+    line-height   : 24px;
+    padding-bottom: 30px;
+    text-align    : center;
+    color         : #FFFFFF;
+
+    @include min-phone-l {
+      font-size  : 28px;
+      line-height: 34px;
+    }
+
+    @include min-tablet {
+      font-size     : 38px;
+      line-height   : 50px;
+      padding-bottom: 50px;
+    }
+
+    @include min-pc {
+      font-size     : 45px;
+      line-height   : 55px;
+      padding-bottom: 75px;
+    }
+    @include min-pc-l {
+      font-size     : 60px;
+      line-height   : 69px;
+      padding-bottom: 83px;
+    }
+  }
+
+  &__steps {
+    padding-bottom: 30px;
+    display       : flex;
+    flex-direction: column;
+    width         : 100%;
+    align-items   : center;
+
+    @include min-tablet {
+      padding-bottom: 50px;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include min-pc {
+      padding-bottom: 80px;
+    }
+
+    >hr {
+      background: #fff;
+      border    : none;
+      width     : 1px;
+      height    : 30px;
+
+      @include min-tablet {
+        flex: 1;
+        height: 1px;
+        max-width: 149px;
+    margin: 0;
+      }
+    }
+  }
+
+  &__step {
+    font-family: $HelveticaN;
+    font-style : normal;
+    font-weight: 200;
+    font-size  : 18px;
+    line-height: 30px;
+    text-align : center;
+    color      : #FFFFFF;
+    padding    : 0 10px;
+
+    @include min-pc {
+      font-size  : 25px;
+      line-height: 30px;
+      padding    : 0 20px;
+    }
+  }
+}

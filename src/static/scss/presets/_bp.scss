@@ -1,0 +1,159 @@
+$bp-phone: 320px;
+$bp-galaxy: 375px;
+$bp-phone-l: 480px;
+$bp-tablet: 768px;
+$bp-tablet-l: 960px;
+$bp-pc: 1280px;
+$bp-pc-large: 1900px;
+@mixin bp-min($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin bp-max($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin bp-between($min-width, $max-width) {
+    @media screen and (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+    }
+}
+
+// PRESETS MIN
+@mixin min-phone {
+    @include bp-min($bp-phone) {
+        @content;
+    }
+    ;
+}
+@mixin min-galaxy {
+    @include bp-min($bp-galaxy) {
+        @content;
+    }
+    ;
+}
+
+@mixin min-phone-l {
+    @include bp-min($bp-phone-l) {
+        @content;
+    }
+    ;
+}
+
+@mixin min-tablet {
+    @include bp-min($bp-tablet) {
+        @content;
+    }
+    ;
+}
+
+@mixin min-tablet-l {
+    @include bp-min($bp-tablet-l) {
+        @content;
+    }
+    ;
+}
+
+@mixin min-pc {
+    @include bp-min($bp-pc) {
+        @content;
+    }
+    ;
+}
+
+@mixin min-pc-l {
+    @include bp-min($bp-pc-large) {
+        @content;
+    }
+    ;
+}
+
+// PRESETS MAX
+@mixin max-phone {
+    @include bp-max($bp-phone) {
+        @content;
+    }
+    ;
+}
+
+@mixin max-galaxy {
+    @include bp-max($bp-galaxy) {
+        @content;
+    }
+    ;
+}
+
+@mixin max-phone-l {
+    @include bp-max($bp-phone-l) {
+        @content;
+    }
+    ;
+}
+
+@mixin max-tablet {
+    @include bp-max($bp-tablet) {
+        @content;
+    }
+    ;
+}
+
+@mixin max-tablet-l {
+    @include bp-max($bp-tablet-l) {
+        @content;
+    }
+    ;
+}
+
+@mixin max-pc {
+    @include bp-max($bp-pc) {
+        @content;
+    }
+    ;
+}
+
+@mixin max-pc-large {
+    @include bp-max($bp-pc-large) {
+        @content;
+    }
+    ;
+}
+
+// PRESETS BETWEEN
+@mixin between-phone-phone-l {
+    @include bp-between($bp-phone, $bp-phone-l) {
+        @content;
+    }
+    ;
+}
+
+@mixin between-phone-l-tablet {
+    @include bp-between($bp-phone-l, $bp-tablet) {
+        @content;
+    }
+    ;
+}
+
+@mixin between-tablet-tablet-l {
+    @include bp-between($bp-tablet, $bp-tablet-l) {
+        @content;
+    }
+    ;
+}
+
+@mixin between-tablet-l-pc {
+    @include bp-between($bp-tablet-l, $bp-pc) {
+        @content;
+    }
+    ;
+}
+
+@mixin between-pc-pc-large {
+    @include bp-between($bp-pc, $bp-pc-large) {
+        @content;
+    }
+    ;
+}

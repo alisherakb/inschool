@@ -1,0 +1,156 @@
+.main {
+  flex          : 1;
+  display       : flex;
+  flex-direction: column;
+
+  >.container {
+    flex          : 1;
+    display       : flex;
+    flex-direction: column;
+  }
+
+  &__inner {
+    flex           : 1;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    padding        : 50px 0;
+
+    @include min-pc-l {
+      padding-bottom: 351px;
+      padding-top   : 191px;
+    }
+  }
+
+  &__subtitle {
+    font-family   : $montserrat;
+    font-style    : normal;
+    font-weight   : normal;
+    font-size     : 18px;
+    line-height   : 24px;
+    text-align    : center;
+    color         : #FFFFFF;
+    padding-bottom: 10px;
+
+    @include min-phone-l {
+      font-size  : 20px;
+      line-height: 35px;
+    }
+
+    @include min-tablet {
+      font-size     : 25px;
+      line-height   : 35px;
+      padding-bottom: 18px;
+    }
+
+    @include min-pc {
+      font-size     : 48px;
+      line-height   : 59px;
+      padding-bottom: 18px;
+    }
+  }
+
+  &__title {
+    font-family   : $montserrat;
+    font-style    : normal;
+    font-weight   : bold;
+    font-size     : 20px;
+    line-height   : 30px;
+    text-align    : center;
+    color         : #2DFFC0;
+    padding-bottom: 30px;
+
+    @include min-phone-l {
+      font-size  : 35px;
+      line-height: 60px;
+    }
+
+    @include min-tablet {
+      font-size     : 40px;
+      line-height   : 60px;
+      padding-bottom: 35px;
+    }
+
+    @include min-pc {
+      font-size     : 80px;
+      line-height   : 98px;
+      padding-bottom: 61px;
+    }
+  }
+
+  &__form {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    width          : 280px;
+    height         : 48px;
+
+    @include min-tablet {
+      width: 350px;
+    }
+
+    @include min-tablet-l {
+      width : 494px;
+      height: 75px;
+    }
+
+    >input {
+      background   : #1B2824;
+      border       : none;
+      outline      : none;
+      width        : 60%;
+      font-family  : Helvetica Neue;
+      font-style   : normal;
+      font-weight  : -400;
+      font-size    : 14px;
+      line-height  : 16px;
+      height       : 100%;
+      color        : rgba($color: #fff, $alpha: .85);
+      display      : flex;
+      align-items  : center;
+      padding      : 0 28px;
+      border-radius: 10px 0 0 10px;
+
+      @include min-tablet {
+        font-size  : 16px;
+        line-height: 18px;
+      }
+
+      @include min-tablet-l {
+        font-size  : 28px;
+        line-height: 34px;
+      }
+    }
+
+    >button {
+      width          : 40%;
+      border-radius  : 0 10px 10px 0;
+      background     : #2DFFC0;
+      border         : none;
+      outline        : none;
+      height         : 100%;
+      font-family    : $Raleway;
+      font-style     : normal;
+      font-weight    : 500;
+      font-size      : 11px;
+      line-height    : 16px;
+      text-align     : center;
+      color          : #000000;
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+
+      @include min-tablet-l {
+        font-size  : 14px;
+        line-height: 16px;
+      }
+
+      @include min-tablet-l {
+        font-size  : 20px;
+        line-height: 23px;
+      }
+    }
+  }
+
+}

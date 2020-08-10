@@ -1,0 +1,30 @@
+{
+  "name": "univercity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-load-plugins": "^2.0.2",
+    "gulp-pug": "^4.0.1",
+    "gulp-rollup": "^2.17.0",
+    "gulp-sass": "^4.0.2",
+    "rollup-stream": "^1.24.1",
+    "vinyl-buffer": "^1.0.1"
+  },
+  "dependencies": {
+    "@chenfengyuan/datepicker": "^1.0.9",
+    "node-sass": "^4.13.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

@@ -1,0 +1,56 @@
+.programm {
+  background         : url(../img/main_bg.jpg) no-repeat;
+  background-size    : cover;
+  background-position: center;
+  padding-top        : 70px;
+  padding-bottom     : 80px;
+
+  @include min-pc {
+    padding-top   : 158px;
+    padding-bottom: 286px;
+  }
+
+  @include min-pc-l {
+    padding-top   : 248px;
+    padding-bottom: 304px;
+  }
+
+  &__inner {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+  }
+
+  &__title {
+    font-family   : $HelveticaN;
+    font-style    : normal;
+    font-weight   : bold;
+    font-size     : 18px;
+    line-height   : 24px;
+    padding-bottom: 30px;
+    text-align    : center;
+    color         : #FFFFFF;
+
+    @include min-phone-l {
+      font-size  : 28px;
+      line-height: 34px;
+    }
+
+    @include min-tablet {
+      font-size     : 38px;
+      line-height   : 50px;
+      padding-bottom: 50px;
+    }
+
+    @include min-pc {
+      font-size     : 45px;
+      line-height   : 55px;
+      padding-bottom: 75px;
+    }
+    @include min-pc-l {
+      font-size     : 60px;
+      line-height   : 69px;
+      padding-bottom: 83px;
+    }
+  }
+}

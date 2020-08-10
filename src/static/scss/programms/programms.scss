@@ -1,0 +1,201 @@
+.programms {
+    >.container{
+        max-width: 1612px;
+    }
+    &__inner {
+        padding: 30px 0;
+
+        @include min-tablet {
+            padding: 50px 0;
+        }
+
+        @include min-pc {
+            padding: 80px 0;
+        }
+
+        @include min-pc-l {
+            padding: 100px 0;
+        }
+    }
+
+    &__title {
+        font-family   : $HelveticaN;
+        font-style    : normal;
+        font-weight   : bold;
+        font-size     : 16px;
+        line-height   : 30px;
+        text-align    : center;
+        color         : #000;
+        padding-bottom: 30px;
+
+        @include min-phone-l {
+            font-size  : 22px;
+            line-height: 45px;
+        }
+
+        @include min-tablet {
+            font-size     : 40px;
+            line-height   : 50px;
+            padding-bottom: 50px;
+        }
+
+        @include min-pc {
+            font-size     : 50px;
+            line-height   : 61px;
+            padding-bottom: 80px;
+        }
+
+        @include min-pc-l {
+            padding-bottom: 100px;
+        }
+    }
+
+    &__items {
+        display              : grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        @include min-tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include min-pc {
+            grid-gap: 28px;
+        }
+    }
+
+    &__item {
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        &-wrapper{
+            max-width: 792px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            &:before{
+                content: "";
+                display: block;
+                padding-top: 110%;
+                @include min-phone-l{
+                    padding-top: 76%;
+                }
+                @include min-tablet{
+                    padding-top: 130%;
+                }
+                @include min-tablet-l{
+                    padding-top: 100%;
+                }
+                @include min-pc{
+                    padding-top: 120%;
+                }
+                @include min-pc-l{
+                    padding-top: 109%;
+                }
+                
+            }
+        }
+        &--first {
+            background: url(../img/programm/progs/1.jpg) no-repeat;
+        }
+
+        &--srcond {
+            background: url(../img/programm/progs/2.jpg) no-repeat;
+        }
+
+        &--third {
+            background: url(../img/programm/progs/3.jpg) no-repeat;
+        }
+
+        &--fourd {
+            background: url(../img/programm/progs/4.jpg) no-repeat;
+        }
+
+        &--first,
+        &--srcond,
+        &--third,
+        &--fourd {
+            background-size    : cover;
+            background-position: center;
+        }
+
+        @include min-tablet {
+            padding: 50px 30px;
+        }
+        @include min-tablet-l {
+            padding: 55px 35px;
+        }
+
+        @include min-pc {
+            padding: 80px 50px;
+        }
+        @include min-pc-l {
+            padding: 80px;
+        }
+
+        &-title {
+            font-family   : $HelveticaN;
+            font-style    : normal;
+            font-weight   : bold;
+            font-size     : 16px;
+            line-height   : 30px;
+            text-align    : center;
+            color         : #FFFFFF;
+            padding-bottom: 30px;
+
+            @include min-tablet {
+                font-size  : 26px;
+                line-height: 36px;
+            }
+
+            @include min-tablet-l {
+                font-size     : 35px;
+                line-height   : 45px;
+                padding-bottom: 50px;
+            }
+
+            @include min-pc {
+                font-size     : 50px;
+                line-height   : 61px;
+                padding-bottom: 80px;
+            }
+
+            @include min-pc-l {
+                padding-bottom: 100px;
+            }
+        }
+
+        &-subjects {
+            display       : flex;
+            flex-direction: column;
+        }
+
+        &-subject {
+            font-family   : $HelveticaB;
+            font-style    : normal;
+            font-weight   : bold;
+            font-size     : 12px;
+            line-height   : 14px;
+            text-align    : center;
+            color         : #FFFFFF;
+            padding-bottom: 5px;
+
+            @include min-phone-l {
+                font-size     : 18px;
+                line-height   : 18px;
+            }
+            @include min-tablet {
+                font-size     : 18px;
+                line-height   : 22px;
+                padding-bottom: 7px;
+            }
+
+            @include min-pc {
+                font-size     : 30px;
+                line-height   : 34px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
