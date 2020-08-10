@@ -18,7 +18,7 @@ gulp.task('pug', function () {
     .pipe(gulp.dest('assets'));
 });
 gulp.task('deploy', function () {
-  return gulp.src('./dist/**/*').pipe(deploy());
+  return gulp.src('./assets/**/*').pipe(deploy());
 });
 gulp.task('js', function () {
   return rollup({
